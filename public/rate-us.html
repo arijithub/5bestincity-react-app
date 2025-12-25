@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate 5BestInCity App</title>
+    <style>
+        :root {
+            --primary-color: #cf5f39;
+            --text-color: #333;
+            --bg-light: #f9f9f9;
+            --border-color: #ddd;
+            --star-color: #ffd700;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background: linear-gradient(135deg, #f5f7fa 0%, #eef2f7 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .header {
+            background: var(--primary-color);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+
+        .content {
+            text-align: center;
+        }
+
+        .app-icon {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .stars {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .star {
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+            fill: none;
+            stroke: var(--star-color);
+            stroke-width: 2;
+        }
+
+        .star.solid {
+            fill: var(--star-color);
+        }
+
+        .star:hover {
+            transform: scale(1.2);
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .modal textarea {
+            width: 100%;
+            height: 100px;
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        .modal button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 1rem;
+			width: 95%;
+        }
+		
+
+        .submit-btn {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .skip-btn {
+            background: var(--bg-light);
+			color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+
+            .app-icon {
+                width: 80px;
+                height: 80px;
+            }
+
+            .star {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <img src="https://play-lh.googleusercontent.com/s6zdKGSxHPwU73v1dIahI-s5e4hUVtDsBFZ9wT-XZxLpJL8mvxaVkH0hSKS_Uv-IWGM" alt="5BestInCity App Icon" class="app-icon">
+            <h2>Enjoying 5BestInCity?</h2>
+            <p>Let us know what you think by rating us on the Store!</p>
+
+            <div class="stars">
+                <svg class="star" data-rating="1" viewBox="0 0 24 24">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg class="star" data-rating="2" viewBox="0 0 24 24">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg class="star" data-rating="3" viewBox="0 0 24 24">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg class="star" data-rating="4" viewBox="0 0 24 24">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+                <svg class="star" data-rating="5" viewBox="0 0 24 24">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h3>We value your feedback!</h3>
+            <textarea placeholder="Enter your feedback here..."></textarea>
+            <div>
+                <button class="submit-btn" onclick="submitFeedback()">Submit</button>
+				<button class="skip-btn" onclick="closeModal()">Skip</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        const stars = document.querySelectorAll('.star');
+        const modal = document.getElementById('modal');
+        let currentRating = 0;
+        let checkFlag = false;
+
+        stars.forEach(star => {
+            star.addEventListener('click', () => {
+                currentRating = parseInt(star.getAttribute('data-rating'));
+                stars.forEach((s, index) => {
+                    if (index < currentRating) {
+                        s.classList.add('solid');
+                    } else {
+                        s.classList.remove('solid');
+                    }
+                });
+                if (currentRating >= 4) {
+                    submitRating(null);
+                } else {
+                    modal.style.display = 'flex';
+                }
+            });
+        });
+
+        function submitFeedback() {
+            const feedback = document.querySelector('textarea').value;
+            submitRating(feedback);
+        }
+
+        function submitRating(feedback) {
+            const formData = new FormData();
+            formData.append('rating', currentRating);
+            if (feedback) formData.append('feedback', feedback);
+            formData.append('platform', 'web');
+
+            // Check login state from both sessionStorage and localStorage
+            const sessionLoginState = sessionStorage.getItem('loginState');
+            const localLoginState = localStorage.getItem('loginState');
+            
+            // User is logged in if either storage has the login state
+            if (sessionLoginState === 'logged_in' || localLoginState === 'logged_in') {
+                const userId = sessionStorage.getItem('user_id') || localStorage.getItem('user_id');
+                if (userId) {
+                    formData.append('user_id', userId);
+                }
+            }
+
+            fetch('https://myapps.5bestincity.com/api/app-api-only/rateus_api.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Thank You!',
+                        text: data.message,
+                        confirmButtonColor: '#cf5f39'
+                    }).then(() => {
+                        if (currentRating >= 4) {
+                            window.open('https://play.google.com/store/apps/details?id=com.andromo.dev276588.app308783&hl=en_IN', '_blank');
+                        }
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: data.message || 'Something went wrong!',
+                        confirmButtonColor: '#cf5f39'
+                    });
+                }
+            })
+            .catch(error => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'Something went wrong!',
+                    confirmButtonColor: '#cf5f39'
+                });
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                closeModal();
+            });
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+            document.querySelector('textarea').value = '';
+        }
+    </script>
+    <script src="/sw-register.js"></script>
+</body>
+</html>

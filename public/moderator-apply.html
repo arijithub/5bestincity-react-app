@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="theme-color" content="#1B2942" />
+    <title>Become Our Moderator</title>
+    <!-- Add SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- <link rel="stylesheet" href="styles.css" > -->
+	
+<style>
+:root {
+  --primary: #3B82F6;
+  --secondary: #333333;
+  --tertiary: #EE8B60;
+  --alternate: #E0E3E7;
+  --primaryText: #14181B;
+  --secondaryText: #57636C;
+  --primaryBackground: #F8FAFC;
+  --secondaryBackground: #FFFFFF;
+  --accent1: #FFD700;
+  --accent2: #4D39D2C0;
+  --accent3: #4dee8b;
+  --accent4: #FFFFFF;
+  --success: #249689;
+  --warning: #F9CF58;
+  --error: #FF5963;
+  --info: #FFFFFF;
+  --callbuttonbg: #fb6800;
+  --whatsappbuttonbg: #60ab13;
+  --amazonbuttonbg: #ffd814;
+  --borderRadius35: 35px; 
+  --borderRadius25: 25px;
+  --commonbtnbg: white;
+
+  --commonbtntextcolor: #5f6366;
+  --sectionmb: 0px 0px 20px 0px;
+  --categoryActive: #ff4405;  
+  --categoryActiveText: #FFFFFF;
+  --categoryBackground: #F8FAFC;
+  --categoryBorder: #E2E8F0;
+  --linkSectionBackground: #F8FAFC;
+
+  --sectionActive: #a59894;
+  --accent2Light: #ff440530;
+  --cardBackground: #FFFFFF; 
+  
+  --app_primary: #CF5F39; 
+  --app_secondary: #00036E;  
+  --app_tertiary: #EE8B60; 
+  --app_alternate: #E0E3E7;  
+  --app_primaryText: #14181B;  
+  --app_secondaryText: #57636C; 
+  --app_primaryBackground: #F1F4F8;
+  --app_secondaryBackground: #FFFFFF;
+  --app_accent1: #4B39EF4C; 
+  --app_accent2: #39D2C04D; 
+  --app_accent3: #EE8B604D;   
+  --app_accent4: #FFFFFF00;   
+  --app_success: #249689;         
+  --app_warning: #F9CF58;           
+  --app_error: #FF5963;           
+  --app_info: #FFFFFF; 
+  --default_category_avatar: #85929e;  
+  --searchbaractiveborder: #007bff
+  
+  --hover-dark: linear-gradient(180deg, #00000010, #00000030);
+  --hover-light: linear-gradient(0deg, #ffffff10, #ffffff30);
+};
+
+html, body {
+    user-select: none;
+}
+
+.selectable {
+    user-select: text;
+}
+
+
+
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+	-webkit-tap-highlight-color: transparent;
+}
+
+a:focus,
+a:visited,
+a:active {
+	outline: none;
+}
+
+.disabled {
+	opacity: 0.2;
+}
+
+
+body, html{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--primaryBackground);
+	position: relative; /* Prevent accidental stacking context resets */
+    z-index: 0; /* Base level */
+}
+
+
+/* /////////////////// */
+/* /////////////////// */
+/* /////////////////// */
+/* /////////////////// */
+/* Heading Section */
+
+.HeadingSection {
+    background-color: transparent;
+    padding: 10px;
+    max-width: 400px;
+    margin: 20px auto;
+    position: sticky;
+    top: 20px;
+    z-index: 1; /* Adjusted z-index to ensure it appears behind the cards */
+}
+
+.HeadingSection h1{
+	font-size: 35px;
+	font-weight: normal;
+	color: #aaa;
+	text-align:	center;
+}
+
+.HeadingSection span {
+	color: var(--app_primary);
+	font-weight: bold;
+	font-size: 45px;
+}
+
+/* /////////////////// */
+/* /////////////////// */
+/* /////////////////// */
+/* /////////////////// */
+/* DetailsCard Section */
+
+.DetailsCardSection {
+    background-color: var(--primaryBackground);
+    padding: 10px;
+    max-width: 400px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 10; /* Increased z-index to make it overlap the header */
+}
+
+.DetailsCard {
+    background-color: var(--secondaryBackground);
+    color: var(--primaryText);
+    border-radius: var(--borderRadius25);
+    padding: 10px 20px;
+    box-shadow: 0 4px 10px #00000010;
+    text-align: left;
+}
+
+.DetailsCard h3 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--primaryText);
+    font-weight: bold;
+}
+
+.DetailsCard ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.DetailsCard ul li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: var(--secondaryText);
+}
+
+
+
+/* /////////////// */
+/* /////////////// */
+/* /////////////// */
+/* SECTION: Testimonials */
+.testimonials-section {
+    display: flex;
+	flex-direction: row;
+	gap: 20px;
+	max-width: 400px;
+	margin: 0px auto;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+    background-color: var(--primaryBackground);
+    border-radius: 0px;
+   /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+   position: relative;
+   z-index: 10;
+    
+}
+
+
+.testimonial {
+	display: flex;
+	flex-direction: column;
+	align-items: left;
+    min-width: 240px;
+    flex: 1;
+    margin-right: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Softer shadow for more depth */
+    text-align: left;
+    font-style: italic;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reviewer-details {
+	display: flex;
+	flex-direction: row;
+}
+
+.reviewer-profile {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
+    flex-shrink: 0;
+	object-fit: cover;
+}
+
+.reviewer-name {
+	display: block;
+	margin-top: 8px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--app_primary);
+}
+
+.testimonial:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: #999;
+}
+
+
+
+/* Custom scrollbar styling */
+.testimonials-section::-webkit-scrollbar {
+    height: 8px;
+}
+
+.testimonials-section::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 10px;
+}
+
+/* Media query for wider screens */
+@media (min-width: 768px) {
+    .testimonials-section {
+        padding: 40px;
+        gap: 40px;
+    }
+    
+    .testimonial {
+        min-width: 240px;
+        max-width: 240px;
+    }
+}
+
+
+/* Modal Styling */
+.testimonial-more-btn {
+    background: none;
+    border: none;
+    color: var(--app_primary);
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 5px;
+}
+
+.testimonial-modal-hidden {
+    display: none;
+}
+
+
+/* Testimonial Modal Overlay */
+.testimonial-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+}
+
+/* Modal Container */
+.testimonial-modal {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10000;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
+    max-height: 80%;
+    padding: 40px 5px 20px 20px;
+    overflow: hidden; /* Prevents the close button from scrolling */
+}
+
+/* Scrollable Content within the Modal */
+.testimonial-modal-content {
+    max-height: calc(80vh - 60px); /* Adjusts height for padding and close button */
+    overflow-y: auto;
+    padding-right: 20px; /* Adds space between scrollbar and content */
+}
+
+/* Custom Scrollbar for Modal Content */
+.testimonial-modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.testimonial-modal-content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 12px;
+}
+
+.testimonial-modal-content::-webkit-scrollbar-thumb {
+    background: var(--app_primary);
+    border-radius: 10px;
+}
+
+.testimonial-modal-content::-webkit-scrollbar-thumb:hover {
+    background: var(--app_primary);
+}
+
+/* Close Button Styling */
+.testimonial-modal-close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: var(--app_primary);
+    cursor: pointer;
+    z-index: 1;
+    background: white;
+    padding: 2px 8px;
+    border-radius: 12px;
+}
+
+
+/* /////////////////// */
+/* /////////////////// */
+/* /////////////////// */
+/* /////////////////// */
+/* Section: FAQ */
+.FAQ {
+    padding: 20px;
+    background-color: var(--primaryBackground);
+    max-width: 400px;
+	margin: 0px auto;
+	box-sizing: border-box;
+	position: relative;
+	z-index: 10;
+}
+
+.FAQ h3 {
+    font-size: 1.2rem;
+    color: var(--primaryText);
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.FAQ-Item {
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 15px 20px 15px 15px;
+    background-color: var(--secondaryBackground);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+	box-shadow: 0 2px 8px #00000010;
+}
+
+.FAQ-Item:hover {
+    box-shadow: 0 4px 10px #00000020;
+}
+
+.FAQ-Question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--primaryText);
+    transition: color 0.3s ease;
+	position: relative;
+}
+
+.FAQ-Icon {
+    height: 16px;
+	fill: var(--accent2);
+	position: absolute;
+    right: -15px;
+}
+
+.FAQ-Item.open .FAQ-Icon {
+    transform: rotate(90deg); /* Rotate icon on expand */
+    fill: var(--accent2) /* Change icon color when expanded */
+}
+
+.FAQ-Answer {
+    font-size: 0.9rem;
+    color: var(--primaryText);
+    margin-top: 15px;
+    line-height: 1.4;
+    display: none;
+    padding-left: 10px;
+    border-left: 2px solid var(--accent2);
+}
+
+.FAQ-Item.open .FAQ-Answer {
+    display: block;
+}
+
+
+
+
+/* /////////////////// */
+/* /////////////////// */
+/* /////////////////// */
+/* /////////////////// */
+/* Primary Action Section */
+.PrimaryAction {
+    position: fixed;
+    bottom: 50px;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    padding: 10px 0px;
+    z-index: 1000;
+    text-align: center;
+}
+
+.PrimaryAction .apply-now-btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 90%;
+    max-width: 400px;
+}
+
+.PrimaryAction .apply-now-btn:hover {
+    background-image: var(--hover-light);
+}
+
+.PrimaryAction .apply-now-btn:active {
+    background-image: var(--hover-light);
+}
+
+
+
+/* /////////////////// */
+/* /////////////////// */
+/* /////////////////// */
+/* /////////////////// */
+/* Section: Register Form */
+.RegisterForm {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffe0;
+    backdrop-filter: blur(10px);
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Highest stacking order */
+}
+
+
+.RegisterForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+	margin-bottom: 50px;
+}
+
+.inputQuestion {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin: 10px 0px;
+	align-items: left;
+}
+
+.RegisterForm label {
+    font-size: 0.9rem;
+    color: var(--secondaryText);
+    font-weight: bold;
+}
+
+.RegisterForm p {
+    font-size: 0.8rem;
+    color: var(--secondaryText);
+    font-weight: normal;
+}
+
+.RegisterForm input {
+    padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primaryBackground);
+    color: var(--primaryText);
+    outline: none;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+	height: 30px;
+}
+
+.RegisterForm textarea {
+	padding: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primaryBackground);
+    color: var(--primaryText);
+    outline: none;
+	transition: box-shadow 0.3s ease, border-color 0.3s ease;
+	height: 150px;
+	resize: vertical;
+}
+
+.RegisterForm input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 5px var(--primary);
+}
+
+.RegisterForm .form-submit-btn {
+    background-color: var(--app_primary);
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: var(--borderRadius25);
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.RegisterForm .form-submit-btn:hover {
+    background-color: var(--app_tertiary);
+    transform: scale(1.05);
+}
+
+.RegisterForm .form-submit-btn:active {
+    background-color: var(--accent2);
+    transform: scale(0.98);
+}
+
+
+/* Full-Screen Modal */
+
+.RegisterForm .modal-content {
+    background-color: var(--secondaryBackground);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    text-align: left;
+    overflow-y: auto;
+    height: 90%;
+	margin: 10px;
+}
+
+.RegisterForm .close-modal-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--app_primary);
+    cursor: pointer;
+}
+
+.RegisterForm .close-modal-btn:hover {
+    color: var(--app_tertiary);
+}
+
+.RegisterForm form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+	margin-top: 40px;
+}
+
+
+.RegisterForm .modal-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.RegisterForm .modal-content::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+.RegisterForm .modal-content::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+    border: 2px solid var(--primaryBackground); /* Optional: Adds padding around the thumb */
+}
+
+
+
+/* /////////////////// */
+/* /////////////////// */
+/* /////////////////// */
+/* /////////////////// */
+/* Section: Page Footer */
+.copyright {
+    background-color: var(--primaryBackground);
+    color: var(--primaryText);
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+	max-width: 600px;
+	margin: 20px auto;
+	box-sizing: border-box;
+}
+
+.copyright p {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.spacer {
+	height: 100px;
+}
+</style>
+</head>
+<body>
+
+<!-- //////////////////// -->
+<!-- //////////////////// -->
+<!-- //////////////////// -->
+<!-- //////////////////// -->
+<!-- Section: Heading -->
+<section class="HeadingSection">
+	<h1>Become Our<br><span>Moderator</span></h1>
+</section>
+
+
+
+
+<!-- //////////////////// -->
+<!-- //////////////////// -->
+<!-- //////////////////// -->
+<!-- //////////////////// -->
+<!-- Section: DetailsCard -->
+<section class="DetailsCardSection">
+	<div class="DetailsCard" style="background-color: #f2ecf7;">
+		<h3>Benefits</h3>
+		<ul>
+			<li>Enjoy unrestricted access to the app's features.</li>
+			<li>Play a key role in shaping the community by monitoring updates and activities.</li>
+			<li>Control membership and uphold community standards.</li>
+		</ul>
+	</div>
+	
+	<div class="DetailsCard" style="background-color: #f8eaec;">
+		<h3>Eligibility</h3>
+		<ul>
+			<li>Active app user with a passion for community growth.</li>
+			<li>Ability to maintain objectivity and adhere to guidelines.</li>
+			<li>Basic understanding of content moderation principles.</li>
+		</ul>
+	</div>
+	
+	<div class="DetailsCard" style="background-color: #e8faec;">
+		<h3>Guidelines</h3>
+		<ul>
+			<li>Maintain a respectful and inclusive environment for all users.</li>
+			<li>Ensure collections adhere to community policies.</li>
+			<li>Report violations promptly and handle disputes fairly.</li>
+		</ul>
+	</div>
+	
+	<div class="DetailsCard" style="background-color: #e8eafc;">
+		<h3>Roles & Responsibility</h3>
+		<ul>
+			<li>Review and approve new collections submitted by users.</li>
+			<li>Monitor shared content for policy compliance.</li>
+			<li>Collaborate with the admin team to improve moderation processes.</li>
+		</ul>
+	</div>
+	
+</section>
+
+
+
+<!-- ///////////////////////////// -->
+<!-- ///////////////////////////// -->
+<!-- ///////////////////////////// -->
+<!-- SECTION: Testimonials -->
+<div class="testimonials-section">
+    <div class="testimonial">
+	<div class="reviewer-details">
+		<img src="https://www.gravatar.com/avatar/27205e5c51cb03f862138b22bcb5dc20f94a342e744ff6df1b8dc8af3c865109?s=160" alt="Reviewer Profile Picture" class="reviewer-profile">
+        <span class="reviewer-name">Arijit Jana</span>
+		</div>
+		<p>"Yaar, moderating collections is so satisfying! Feels good to keep things clean and organized. Plus, I get to see all these creative collections first. Totally loving this role."
+		</p>
+    </div>
+    <div class="testimonial">
+		<div class="reviewer-details">
+		<img src="https://img.freepik.com/free-photo/smiley-man-posing-medium-shot_23-2149915893.jpg?t=st=1736261792~exp=1736265392~hmac=1945aae3a36cb16e0a782c4b32133cd9289d901d31ac5f6200d0495e0b07aa77&w=360" alt="Reviewer Profile Picture" class="reviewer-profile">
+        <span class="reviewer-name">Tanmoy Chatterjee</span>
+		</div>
+        <p>"Mujhe toh bahut mazza aa raha hai. Moderating karne ke baad laga ki main bhi kuch impactful kar rahi hoon. Aur community ke log bhi bahut helpful hai!"
+		</p>
+		
+    </div>
+    <div class="testimonial">
+        <div class="reviewer-details">
+		<img src="https://img.freepik.com/free-photo/close-up-portrait-woman-smiling-camera_23-2148286089.jpg?t=st=1736261896~exp=1736265496~hmac=0453d3f1b48be1f537515da8e66eb7d3d85248c3750a62ec78cf8aad3f9266b7&w=740" alt="Reviewer Profile Picture" class="reviewer-profile">
+        <span class="reviewer-name">Moumita Majumdar</span>
+		</div>
+		<p>"Aapko pata hai? Yeh role kaafi easy aur mast hai. Bas thoda dhyan rakhna padta hai ki content sahi ho. Friends ko dikhane me bhi pride feel hota hai ki I am a moderator!"</p>
+		
+    </div>
+    <div class="testimonial">
+        <div class="reviewer-details">
+		<img src="https://img.freepik.com/free-photo/front-view-man-ambulance-car_23-2149478476.jpg?t=st=1736261851~exp=1736265451~hmac=d706427e5658770e32d23e334953e317ea81df9f3854cad75fa2539071e227f5&w=740" alt="Reviewer Profile Picture" class="reviewer-profile">
+        <span class="reviewer-name">Soumik Roy</span>
+		</div>
+		<p>"First, I thought moderating kaam thoda boring hoga, but trust me, it’s fun! New collections dekh ke ideas milte hain aur platform ko safe rakhna achha lagta hai."</p>
+		
+    </div>
+	<div class="testimonial">
+        <div class="reviewer-details">
+		<img src="https://img.freepik.com/free-photo/young-adult-enjoying-virtual-date_23-2149328221.jpg?t=st=1736261934~exp=1736265534~hmac=27eb98227198953a0d17a07ad093a6bf85a4c7509c8babb103ae890d498d01d1&w=360" alt="Reviewer Profile Picture" class="reviewer-profile">
+        <span class="reviewer-name">Hirak Jana</span>
+		</div>
+		<p>"Becoming mod is so nice. I get to check all new collections before others. Feels like I am doing somthing impportant for the app. Plus, it's fun job also!"</p>
+		
+    </div>
+	<div class="testimonial">
+	<div class="reviewer-details">
+		<img src="https://img.freepik.com/free-photo/close-up-portrait-young-man-isolated-black-studio-background-photoshot-real-emotions-male-model-smiling-feeling-happy-facial-expression-pure-clear-human-emotions-concept_155003-25751.jpg?t=st=1736261960~exp=1736265560~hmac=3de8a5d72fceef387ade8eaa11c97ee7724cb67a2ed0dc9eabd052deb86b201d&w=740" alt="Reviewer Profile Picture" class="reviewer-profile">
+        <span class="reviewer-name">Debashis Mondal</span>
+		</div>
+        <p>"Moderator banne ke baad samajh aaya ki community ka ek strong part banna kitna accha lagta hai. Kabhi kabhi tough hota hai, but overall ek dum fulfilling role hai."</p>
+        
+    </div>
+	<div class="testimonial">
+		<div class="reviewer-details">
+		<img src="https://img.freepik.com/free-photo/closeup-young-hispanic-man-casuals-studio_662251-600.jpg?t=st=1736261986~exp=1736265586~hmac=e11b7293e42521cd3a98f7a22eef35e87fbece3e878ba9cf3c24de2be92fd886&w=740" alt="Reviewer Profile Picture" class="reviewer-profile">
+        <span class="reviewer-name">Bappaditya Mishra</span>
+		</div>
+        <p>"This mod work is suprisingly fun. U just need to check collections and see if they follow rules. It's easy and I also learn new things while doing it."</p>
+        
+    </div>
+</div>
+
+<!-- Testimonials Modal HTML -->
+<div id="testimonialModal" class="testimonial-modal testimonial-modal-hidden">
+    <div class="testimonial-modal-content">
+        <span class="testimonial-modal-close-btn">&times;</span>
+        <p id="testimonialModalText"></p>
+    </div>
+</div>
+
+<!-- Modal Overlay to disable background interactions -->
+<div id="testimonialModalOverlay" class="testimonial-modal-overlay testimonial-modal-hidden"></div>
+
+
+<script>
+document.querySelectorAll('.testimonial p').forEach(testimonial => {
+    const fullText = testimonial.innerText;
+    const maxChars = 100;
+
+    if (fullText.length > maxChars) {
+        const truncatedText = fullText.slice(0, maxChars) + '...';
+        testimonial.innerHTML = truncatedText;
+
+        const moreBtn = document.createElement('button');
+        moreBtn.innerText = 'More';
+        moreBtn.classList.add('testimonial-more-btn');
+        testimonial.appendChild(moreBtn);
+
+        moreBtn.addEventListener('click', function() {
+            // Display the overlay and modal
+            document.getElementById('testimonialModal').style.display = 'block';
+            document.getElementById('testimonialModalOverlay').style.display = 'block';
+            document.getElementById('testimonialModalText').innerText = fullText;
+        });
+    }
+});
+
+// Close the modal
+document.querySelector('.testimonial-modal-close-btn').addEventListener('click', function() {
+    document.getElementById('testimonialModal').style.display = 'none';
+    document.getElementById('testimonialModalOverlay').style.display = 'none'; // Hide overlay
+});
+
+// Close modal by clicking on overlay
+document.getElementById('testimonialModalOverlay').addEventListener('click', function() {
+    document.getElementById('testimonialModal').style.display = 'none';
+    document.getElementById('testimonialModalOverlay').style.display = 'none'; // Hide overlay
+});
+
+
+</script>
+
+<!-- //////////////////// -->
+<!-- //////////////////// -->
+<!-- //////////////////// -->
+<!-- //////////////////// -->
+<!-- Section: FAQ -->
+<section class="FAQ">
+    <h3>Frequently Asked Questions</h3>
+    <div class="FAQ-Item">
+        <div class="FAQ-Question">
+            <span>Is there any training provided for new moderators?</span>
+            <svg class="FAQ-Icon" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
+        </div>
+		<div class="FAQ-Answer">
+            Yes, new moderators may receive guidance or access to resources to understand community policies, tools, and best practices.
+        </div>
+    </div>
+    <div class="FAQ-Item">
+        <div class="FAQ-Question">
+            <span>Is this a paid role or voluntary?</span>
+            <svg class="FAQ-Icon" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
+        </div>
+		<div class="FAQ-Answer">
+            Moderation roles are typically voluntary and aimed at those passionate about community building, though perks like unrestricted app access are provided.
+        </div>
+    </div>
+    <div class="FAQ-Item">
+        <div class="FAQ-Question">
+            <span>Can I apply if I have no prior moderation experience?</span>
+            <svg class="FAQ-Icon" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
+        </div>
+		<div class="FAQ-Answer">
+            Yes, a passion for community growth and a willingness to learn are more important than prior experience.
+        </div>
+    </div>
+	<div class="FAQ-Item">
+        <div class="FAQ-Question">
+            <span>Can I step down as a moderator if I am unable to continue?</span>
+            <svg class="FAQ-Icon" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
+        </div>
+		<div class="FAQ-Answer">
+            Yes, you can notify the admin team if you wish to step down, and your contributions will be appreciated.
+        </div>
+    </div>
+	<div class="FAQ-Item">
+        <div class="FAQ-Question">
+            <span>How much time commitment is expected from moderators?</span>
+            <svg class="FAQ-Icon" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M579-480 285-774q-15-15-14.5-35.5T286-845q15-15 35.5-15t35.5 15l307 308q12 12 18 27t6 30q0 15-6 30t-18 27L356-115q-15 15-35 14.5T286-116q-15-15-15-35.5t15-35.5l293-293Z"/></svg>
+        </div>
+		<div class="FAQ-Answer">
+            While there are no strict time requirements, moderators should dedicate enough time to effectively monitor and manage the community.
+        </div>
+    </div>
+</section>
+
+<script>
+document.querySelectorAll('.FAQ-Item').forEach((item) => {
+    item.addEventListener('click', () => {
+        // Remove "open" class from other items
+        document.querySelectorAll('.FAQ-Item.open').forEach((otherItem) => {
+            if (otherItem !== item) {
+                otherItem.classList.remove('open');
+            }
+        });
+
+        // Toggle the "open" class on the clicked item
+        item.classList.toggle('open');
+    });
+});
+
+
+</script>
+
+
+<!-- //////////////////// -->
+<!-- //////////////////// -->
+<!-- //////////////////// -->
+<!-- //////////////////// -->
+<!-- Section: Primary Action -->
+<div class="PrimaryAction">
+    <button class="apply-now-btn">Apply Now</button>
+</div>
+
+<!-- //////////////////// -->
+<!-- //////////////////// -->
+<!-- //////////////////// -->
+<!-- //////////////////// -->
+<!-- Section: Page Footer -->
+<footer class="copyright">
+    <p>© <script>document.write(new Date().getFullYear())</script> 5bestincity.com. All rights reserved.</p>
+	<div class="spacer"></div>
+</footer>
+<script src="/sw-register.js"></script>
+
+<!-- Section: RegisterForm -->
+<section class="RegisterForm">
+    <div class="modal-content">
+        <button class="close-modal-btn">&times;</button>
+        <form>
+            <div class="inputQuestion">
+                <label for="fullname">Your Fullname</label>
+                <input type="text" id="fullname" name="fullname" placeholder="" required>
+            </div>
+            
+            <div class="inputQuestion">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="" required>
+            </div>
+
+            <div class="inputQuestion">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="" required>
+            </div>
+
+            <div class="inputQuestion">
+                <label for="application_reason">Why you want to become our Moderator?</label>
+                <textarea id="application_reason" name="application_reason" placeholder="" required></textarea>
+            </div>
+
+            <div class="inputQuestion">
+                <label for="years_of_experience">Years of Experience</label>
+                <input type="number" id="years_of_experience" name="years_of_experience" placeholder="" min="0" required>
+            </div>
+
+            <div class="inputQuestion">
+                <label for="skills_expertise">Skills & Expertise</label>
+                <input type="text" id="skills_expertise" name="skills_expertise" placeholder="e.g., Content Writing, Social Media, etc." required>
+            </div>
+
+            <button type="submit" class="form-submit-btn">Submit</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    // Select elements
+    const applyButton = document.querySelector('.apply-now-btn');
+    const registerForm = document.querySelector('.RegisterForm');
+    const closeModalButton = document.querySelector('.close-modal-btn');
+    const phoneInput = document.querySelector('#phone');
+    const form = document.querySelector('form');
+
+    // Show the modal on button click
+    applyButton.addEventListener('click', () => {
+        registerForm.style.display = 'flex'; // Show modal
+    });
+
+    // Hide the modal on close button click
+    closeModalButton.addEventListener('click', () => {
+        registerForm.style.display = 'none'; // Hide modal
+    });
+
+    // Optional: Hide the modal when clicking outside the modal content
+    registerForm.addEventListener('click', (e) => {
+        if (e.target === registerForm) {
+            registerForm.style.display = 'none'; // Hide modal
+        }
+    });
+
+    // Validate phone number on form submission
+    form.addEventListener('submit', (e) => {
+        e.preventDefault(); // Prevent default form submission
+
+        // Get all form fields
+        const fullname = document.getElementById('fullname').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = phoneInput.value.trim();
+        const applicationReason = document.getElementById('application_reason').value.trim();
+        const experience = document.getElementById('years_of_experience').value.trim();
+        const skills = document.getElementById('skills_expertise').value.trim();
+
+        // Validation checks
+        if (!fullname) {
+            Swal.fire({
+                title: 'Validation Error',
+                text: 'Please enter your full name',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+            return;
+        }
+
+        if (!email || !email.match(/^[^\s@]+@[^\s@]+\.[^\s@]+$/)) {
+            Swal.fire({
+                title: 'Validation Error',
+                text: 'Please enter a valid email address',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+            return;
+        }
+
+        if (!phone) {
+            Swal.fire({
+                title: 'Validation Error',
+                text: 'Please enter your phone number',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+            return;
+        }
+
+        if (!phone.match(/^\d{10}$/)) {
+            Swal.fire({
+                title: 'Validation Error',
+                text: 'Please enter a valid 10-digit phone number',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+            return;
+        }
+
+      
+
+        // Create a FormData object from the form
+        const formData = new FormData(form);
+
+        // Send the form data using fetch
+        fetch('https://myapps.5bestincity.com/api/app-api-only/submit_moderator_application.php', { // Update this line to your new PHP script
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json', // Accept JSON response
+            },
+        })
+        .then(response => response.json()) // Parse JSON response
+        .then(data => {
+            if (data.status === 'success') {
+                // Show success message using SweetAlert
+                Swal.fire({
+                    title: 'Success!',
+                    text: data.message,
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                });
+                registerForm.style.display = 'none'; // Hide modal after submission
+                form.reset(); // Reset the form
+            } else {
+                // Show error message
+                Swal.fire({
+                    title: 'Error!',
+                    text: data.message,
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            }
+        })
+        .catch(error => {
+            console.error('There was a problem with the fetch operation:', error);
+            Swal.fire({
+                title: 'Error!',
+                text: 'There was an error submitting your form. Please try again.',
+                icon: 'error',
+                confirmButtonText: 'OK'
+            });
+        });
+    });
+</script>
+</body>
+</html>

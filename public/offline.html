@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5Bestincity App Offline</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(#f9f6ef, #f5e0c6) !important;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: #cf5f39;
+            color: white;
+            padding: 5px 20px; /* Reduced padding for smaller height */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			min-height: 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 18px; /* Adjust font size if needed */
+        }
+
+        .offline-content {
+            text-align: center;
+            max-width: 80%;
+            margin-top: 60px; /* Adjusted margin for better spacing */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .offline-content img {
+            max-width: 60%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+
+        .try-again-button {
+            margin-top: 30px; /* Increased top margin for better spacing */
+            padding: 15px 40px; /* Larger padding for a wider button */
+            background-color: #cf5f39;
+            color: white;
+            border: none;
+            border-radius: 25px; /* Increased border-radius for rounded corners */
+            cursor: pointer;
+            font-size: 18px; /* Increased font size for better readability */
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added subtle box-shadow */
+            align-self: center; /* Center the button */
+        }
+
+        .try-again-button:hover {
+            background-color: #d74213;
+        }
+    </style>
+</head>
+
+<body>
+    
+    <div class="offline-content">
+        <h2>You are offline</h2>
+        <img src="/images/no-internet.gif" alt="Offline GIF">
+        <button class="try-again-button" onclick="window.location.reload();">Try Again</button>
+    </div>
+	<script src="/sw-register.js"></script>
+</body>
+
+</html>

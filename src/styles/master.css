@@ -1,0 +1,51 @@
+:root {
+  /* Primary Colors */
+  --color-primary: #FFC5F539;
+  --color-secondary: #FF8036C0;
+  --color-tertiary: #FFEE8B60;
+  --color-alternate: #FFE0E3E7;
+ 
+  /* Text Colors */
+  --color-primary-text: #FF1418B;
+  --color-secondary-text: #FF57636C;
+ 
+  /* Background Colors */
+  --color-primary-background: #FFF1F4F8;
+  --color-secondary-background: #FFFFFFFF;
+ 
+  /* Accent Colors */
+  --color-accent1: #4C4839EF;
+  --color-accent2: #4D39D2C0;
+  --color-accent3: #4DEE8B60;
+  --color-accent4: #FFFFFFFF;
+ 
+  /* Status Colors */
+  --color-success: #F249689;
+  --color-warning: #F9CF58;
+  --color-error: #FF5963;
+  --color-info: #FFFFFF;
+ 
+  /* CSS Color Application Examples */
+  .text-primary {
+    color: var(--color-primary);
+  }
+ 
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+ 
+  .border-primary {
+    border-color: var(--color-primary);
+  }
+}
+ 
+/* Media query for dark mode preference */
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* You can adjust colors for dark mode here */
+    --color-primary-background: #1a1a1a;
+    --color-secondary-background: #2d2d2d;
+    --color-primary-text: #ffffff;
+    --color-secondary-text: #cccccc;
+  }
+}

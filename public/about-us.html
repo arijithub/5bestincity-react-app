@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Roadmap.</title>
+        <style>
+        :root {
+            --primary-color: #007bff;
+            --text-color: #333;
+            --bg-light: #f9f9f9;
+            --border-color: #ddd;
+            --icon-bg: #e9ecef;
+            --app_primary: #CF5F39;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-color);
+        }
+		.header {
+			max-width: 400px;
+			padding: 10px 20px;
+			margin: 20px auto;
+			position: sticky;
+			top: 20px;
+			z-index: 0;
+		}
+
+		.container {
+			max-width: 400px;
+			margin: 20px auto;
+			padding: 20px;
+			background: #ffffff;
+			border-radius: 25px;
+			box-shadow: 0 2px 10px #00000020;
+			border: 0px solid var(--border-color);
+			z-index: 10;
+			position: relative;
+		}
+		
+		.container h2 {
+			font-size: 24px;
+			font-weight: normal;
+			color: #473129;
+		}
+
+        .roadmap {
+            position: relative;
+            margin-left: 20px;
+        }
+        .roadmap::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background: var(--border-color);
+        }
+        .year {
+            display: flex;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+       .year::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            width: 12px;
+            height: 12px;
+            background: var(--app_primary);
+            border-radius: 50%;
+			animation-name: pulse;
+			animation-duration: 2s;
+			animation-iteration-count: infinite;			
+        }
+        .content {
+            margin-left: 40px;
+        }
+        .year h3 {
+            margin: 0;
+			color: var(--app_primary);
+        }
+		
+		.year h4 {
+            margin: 0;
+			font-size: 18px;
+			font-weight: bold;
+			color: var(--primaryText);
+        }
+		
+        .content p {
+            margin: 15px 0px;
+            color: var(--text-color);
+        }
+		.content img {
+			height: 50px;
+			width: auto;
+			padding: 5px 3px;
+			border-radius: 10px;
+		}
+		
+		
+		@keyframes pulse {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(207, 95, 57, 0.4);
+            }
+            50% {
+                transform: scale(1.2);
+                box-shadow: 0 0 10px 5px rgba(207, 95, 57, 0.2);
+            }
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 0 0 rgba(207, 95, 57, 0.4);
+            }
+        }
+		
+		.follow-us {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px 20px 40px 20px;
+            background: #ffffff;
+            color: var(--app_primary);
+			font-size: 1rem;
+            border-radius: 25px;
+            text-align: center;
+            box-shadow: 0 2px 10px #00000020;
+			position: relative;
+			z-index: 10;
+        }
+        .follow-us h2 {
+            margin-bottom: 20px;
+        }
+        .social-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .social-buttons a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--app_primary);
+            font-size: 20px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .social-buttons a:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+		
+		.social-buttons svg {
+            height: 50px;
+			width: 50px;
+        }
+		
+		.spacer {
+			height: 100px;
+			width: 100%;
+		}
+    </style>
+</head>
+<body>
+	<div class="header">
+		<h1>About Us</h1>
+	</div>
+    <div class="container">
+        <h2>Our Journey: From Blog to Digital Excellence</h2>
+		
+        <div class="roadmap">
+            <div class="year">
+                <div class="content">
+                    <h3>2010-2011</h3>
+					<img src="https://cdn-icons-png.flaticon.com/512/10026/10026257.png">
+					<img src="https://img.freepik.com/free-vector/head-profile-with-gears_98292-387.jpg">
+					<h4>The Genesis</h4>
+					
+                    <p>Launched ra-re.org, a blog dedicated to fascinating rare facts from around the world.</p>
+                    <p>Began building our first community of curious minds and knowledge seekers.</p>
+					</ul>
+                </div>
+            </div>
+			
+            <div class="year">
+                <div class="content">
+					<h3>2011-2012</h3>
+					<img src="https://2il.org/wp-content/uploads/2021/07/logo-2ilorg-80px.png">
+					<img src="https://cdn-icons-png.flaticon.com/512/9518/9518785.png">
+					<h4>Evolution of Knowledge Sharing</h4>
+                    <p>Rebranded to 2il.org (Today I Learned)</p>
+                    <p>Experienced significant traffic growth</p>
+					<p>Established our foundation in content curation and user engagement</p>
+                </div>
+            </div>
+			
+			<div class="year">
+                <div class="content">
+                    <h3>2013-2014</h3>
+					<img src="https://cdn-icons-png.flaticon.com/512/1759/1759492.png">
+					<img src="https://static.vecteezy.com/system/resources/thumbnails/046/643/463/small_2x/50k-follower-3d-icon-png.png">
+					<h4>First Mobile Venture</h4>
+                    <p>Launched our first mobile application: Bengali News</p>
+					<p>Achieved remarkable success with 50,000+ downloads in just two months</p>
+					<p>Demonstrated our ability to serve regional markets effectively</p>
+                </div>
+            </div>
+			
+			<div class="year">
+                <div class="content">
+					<h3>2014-2015</h3>
+					<img src="https://d1nhio0ox7pgb.cloudfront.net/_img/g_collection_png/standard/512x512/shopping_cart.png">
+					<img src="https://cdn-icons-png.flaticon.com/512/5412/5412794.png">
+					<img src="https://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/Downloads-icon.png">
+					<h4>E-commerce Innovation</h4>
+                    <p>Released "Online Shopping India" mobile app</p>
+					<p>Introduced manually curated deals and coupons from major platforms</p>
+                    <p>Reached 500,000 downloads</p>
+					<p>Pioneered our approach to careful curation and selection</p>
+                </div>
+            </div>
+			
+			<div class="year">
+                <div class="content">
+					<h3>2015-2016</h3>
+					<img src="https://velarudh.com/assets/img/logo.png">
+					<img src="https://cdn-icons-png.flaticon.com/512/1807/1807601.png">
+					<img src="https://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/Downloads-icon.png">
+					<h4>Corporate Milestone</h4>
+                    <p>Incorporated as Velarudh Infotech Private Limited</p>
+					<p>Expanded into e-commerce with direct product sales on major platforms</p>
+                    <p>Reached 1 million users on Google Play Store</p>
+					<p>Discovered the power of Top 5 curation through product sales success</p>
+                </div>
+            </div>
+			
+			<div class="year">
+                <div class="content">
+					<h3>2016-2017</h3>
+					<img src="https://cdn.iconscout.com/icon/free/png-256/free-mobile-recharge-icon-download-in-svg-png-gif-file-formats--phone-balance-online-e-wallet-pack-commerce-shopping-icons-1538089.png">
+					<img src="https://icons.iconarchive.com/icons/dtafalonso/android-lollipop/512/Downloads-icon.png">
+					<img src="https://www.iconpacks.net/icons/2/free-store-icon-2017-thumb.png">
+					<img src="https://cdn-icons-png.flaticon.com/512/1006/1006555.png">
+					<h4>Service Expansion</h4>
+                    <p>Launched mobile recharge and bill payments app</p>
+					<p>Achieved 3 million downloads in the first year</p>
+                    <p>Began featuring selective businesses on our mobile platforms</p>
+					<p>Established foundation for business partnerships</p>
+                </div>
+            </div>
+			
+			<div class="year">
+                <div class="content">
+					<h3>2017-2018</h3>
+					<img src="https://cdn-icons-png.flaticon.com/512/10021/10021725.png">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Emblem_of_India_%28Government_Gazette%29.svg/1200px-Emblem_of_India_%28Government_Gazette%29.svg.png">
+					<img src="https://cdn-icons-png.flaticon.com/512/1006/1006555.png">
+					<h4>Security Solutions & Government Projects</h4>
+                    <p>Expanded into CCTV and security systems (West Bengal focus)</p>
+					<p>Participated in prestigious government projects:</p>
+						<ul>
+							<li>Kolkata Airport</li>
+							<li>Kolkata Police</li>
+							<li>Jadavpur University</li>
+							<li>Victoria Memorial Hall</li>
+							<li>ICAI, BSF, NHPC, EPFO</li>
+							<li>and more ...</li>
+						</ul>
+                    <p>Built credibility in institutional partnerships</p>
+                </div>
+            </div>
+			
+			<div class="year">
+                <div class="content">
+					<h3>2018-2019</h3>
+					<img src="https://cdn-icons-png.flaticon.com/512/10382/10382399.png">
+					<img src="https://static.vecteezy.com/system/resources/thumbnails/035/321/928/small_2x/mini-cute-store-shop-merchant-building-3d-rendering-icon-illustration-concept-isolated-png.png">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6Kfdyz-EjxdKcJaJ8UWswwMvQ5kKioqMYfw&s">
+					<h4>Digital Transformation</h4>
+                    <p>Launched ERP solutions for small businesses</p>
+					<p>Reached 50,000+ selective business showcases</p>
+                    <p>Strengthened our position in business solutions</p>
+                </div>
+            </div>
+			
+			<div class="year">
+                <div class="content">
+					<h3>2019-2020</h3>
+					<img src="https://3rdmatrix.com/img/fabicon.ico">
+					<img src="https://icons.veryicon.com/png/o/application/wechat/qr-code-76.png">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT30v_gg4MP7_r4W4f4JtiaZZ5lJAGQSOEoYg&s">
+					<h4>Service Diversification</h4>
+                    <p>Established 3rdMatrix Consultancy for digital services</p>
+					<p>Enhanced mobile apps with QR Scanning and Health & Fitness features</p>
+                    <p>Broadened our digital service portfolio</p>
+                </div>
+            </div>
+			
+			<div class="year">
+                <div class="content">
+					<h3>2020-2021</h3>
+					<img src="https://cdn-icons-png.flaticon.com/512/2833/2833315.png">
+					<img src="https://cdn-icons-png.flaticon.com/512/3252/3252632.png">
+					<img src="https://png.pngtree.com/png-vector/20221026/ourmid/pngtree-top-5-greeting-with-golden-laurel-png-image_6387853.png">
+					<img src="https://cdn-icons-png.freepik.com/512/8427/8427055.png">
+					<h4>Birth of 5BestInCity.com</h4>
+                    <p>Responded to COVID-19 business challenges creatively</p>
+					<p>Recognized growing demand from businesses for enhanced search engine presence</p>
+                    <p>Leveraged our insight that users prefer top 5 recommendations</p>
+					<p>Began development of 5BestInCity.com to help businesses gain visibility</p>
+                    <p>Created comprehensive search optimization strategies for listed businesses</p>
+                </div>
+            </div>
+			
+			<div class="year">
+                <div class="content">
+					<h3>2021-2022</h3>
+					<img src="https://play-lh.googleusercontent.com/s6zdKGSxHPwU73v1dIahI-s5e4hUVtDsBFZ9wT-XZxLpJL8mvxaVkH0hSKS_Uv-IWGM">
+					<img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png">
+					<img src="https://cdn-icons-png.flaticon.com/512/8716/8716445.png">
+					<img src="https://cdn-icons-png.flaticon.com/512/11633/11633394.png">
+					<h4>Digital Evolution & Recognition</h4>
+                    <p>Successfully launched 5BestInCity.com</p>
+					<p>Established strong presence on Facebook</p>
+                    <p>Experienced rapid user growth and engagement</p>
+					<p>Developed robust digital infrastructure for business listings</p>
+                </div>
+            </div>
+			
+			<div class="year">
+                <div class="content">
+					<h3>2022-2023</h3>
+					<img src="https://cdn-icons-png.flaticon.com/512/6400/6400498.png">
+					<img src="https://cdn-icons-png.flaticon.com/512/7238/7238706.png">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-cnL8KIy7u1SFNmyLJNJtsj4KbcJkut7qyw&s">
+					<img src="https://cdn-icons-png.freepik.com/256/16814/16814089.png">
+					<h4>Innovation & Excellence</h4>
+                    <p>Launched Video Interview series on Facebook featuring business owners</p>
+					<p>Introduced Certificate of Excellence program and commemorative mementos</p>
+                    <p>Expanded to cover 50+ business categories</p>
+					<p>Gained significant social media traction</p>
+					<p>Built strong community among specialized professionals:</p>
+						<ul>
+							<li>Astrologers</li>
+							<li>Numerologists</li>
+							<li>Vastu consultants</li>
+							<li>Medical professionals</li>
+						</ul>
+					<p>Surpassed 200,000 followers</p>
+                </div>
+            </div>
+			
+			<div class="year">
+                <div class="content">
+					<h3>2023-2024</h3>
+					<img src="https://cdn-icons-png.flaticon.com/512/5278/5278402.png">
+					<img src="https://cdn3d.iconscout.com/3d/premium/thumb/add-user-3d-icon-download-in-png-blend-fbx-gltf-file-formats--new-account-profile-speech-bubble-pack-interface-icons-8232036.png">
+					<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIZF5uAauKuhMo3P9stb5CGrGuQEx196vnsw&s">
+					<img src="https://cdn-icons-png.flaticon.com/512/2972/2972071.png">
+					<h4>AI Integration & Growth</h4>
+                    <p>Implemented AI-powered business analysis tools</p>
+					<p>Reached 450,000+ followers</p>
+					<p>Extended reach to new industries:</p>
+						<ul>
+							<li>Packers and movers</li>
+							<li>Travel agents</li>
+							<li>Chartered accountants</li>
+							<li>Business coaches</li>
+						</ul>
+					<p>Enhanced platform with business profile pages</p>
+					<p>Strengthened support for small businesses</p>
+					<p>Began comprehensive AI-driven business analysis initiative</p>
+                </div>
+            </div>
+			
+			<div class="year">
+                <div class="content">
+					<h3>2024-2025</h3>
+					<img src="https://icons.veryicon.com/png/o/internet--web/flatten-icon/folder-223.png">
+					<img src="https://png.pngtree.com/png-clipart/20221115/ourmid/pngtree-share-icon-button-png-image_6454552.png">
+					<img src="https://cdn-icons-png.flaticon.com/512/4397/4397477.png">
+					<img src="https://cdn-icons-png.flaticon.com/512/8956/8956264.png">
+					<h4>Technological Leadership</h4>
+                    <p>Achieved milestone of analyzing 1 million businesses through AI</p>
+					<p>Launched innovative "Collection" feature in our app</p>
+					<p>Enabled user-created resource collections</p>
+					<p>Enhanced sharing capabilities</p>
+					<p>Strengthened community engagement features</p>
+					<p>Focused on data-driven business insights and recommendations</p>
+                </div>
+            </div>
+			
+			
+            <!-- Add more years here -->
+        </div>
+		<p>This journey represents our commitment to innovation, quality, and community service. Each year has brought new challenges and opportunities, helping us evolve into a comprehensive platform that connects people with excellence across India.</p>
+		<p>A Legacy of Innovation by Velarudh Infotech Pvt Ltd</p>
+		
+    </div>
+	
+	<div class="follow-us">
+        <h2>Follow Us On</h2>
+        <div class="social-buttons">
+            <a href="https://www.facebook.com/5bestincity" target="_blank" title="Facebook">
+				<svg width="800px" height="800px" viewBox="0 0 16 16" fill="none">
+					<path fill="#1877F2" d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z"/><path fill="#ffffff" d="M10.725 10.023L11.035 8H9.094V6.687c0-.553.27-1.093 1.14-1.093h.883V3.87s-.801-.137-1.567-.137c-1.6 0-2.644.97-2.644 2.724V8H5.13v2.023h1.777v4.892a7.037 7.037 0 002.188 0v-4.892h1.63z"/>
+				</svg>
+			</a>
+
+            <a href="https://www.instagram.com/5bestincity/" target="_blank" title="Instagram">
+				<svg width="800px" height="800px" viewBox="0 0 48 48" fill="none">
+					<circle cx="24" cy="24" r="20" fill="#C13584"/>
+					<path d="M24 14.1622C27.2041 14.1622 27.5837 14.1744 28.849 14.2321C30.019 14.2855 30.6544 14.481 31.0773 14.6453C31.6374 14.863 32.0371 15.123 32.457 15.5429C32.877 15.9629 33.137 16.3626 33.3547 16.9227C33.519 17.3456 33.7145 17.981 33.7679 19.1509C33.8256 20.4163 33.8378 20.7958 33.8378 23.9999C33.8378 27.2041 33.8256 27.5836 33.7679 28.849C33.7145 30.019 33.519 30.6543 33.3547 31.0772C33.137 31.6373 32.877 32.0371 32.4571 32.457C32.0371 32.8769 31.6374 33.1369 31.0773 33.3546C30.6544 33.519 30.019 33.7144 28.849 33.7678C27.5839 33.8255 27.2044 33.8378 24 33.8378C20.7956 33.8378 20.4162 33.8255 19.151 33.7678C17.981 33.7144 17.3456 33.519 16.9227 33.3546C16.3626 33.1369 15.9629 32.8769 15.543 32.457C15.1231 32.0371 14.863 31.6373 14.6453 31.0772C14.481 30.6543 14.2855 30.019 14.2321 28.849C14.1744 27.5836 14.1622 27.2041 14.1622 23.9999C14.1622 20.7958 14.1744 20.4163 14.2321 19.1509C14.2855 17.981 14.481 17.3456 14.6453 16.9227C14.863 16.3626 15.123 15.9629 15.543 15.543C15.9629 15.123 16.3626 14.863 16.9227 14.6453C17.3456 14.481 17.981 14.2855 19.151 14.2321C20.4163 14.1744 20.7959 14.1622 24 14.1622ZM24 12C20.741 12 20.3323 12.0138 19.0524 12.0722C17.7752 12.1305 16.9028 12.3333 16.1395 12.63C15.3504 12.9366 14.6812 13.3469 14.0141 14.0141C13.3469 14.6812 12.9366 15.3504 12.63 16.1395C12.3333 16.9028 12.1305 17.7751 12.0722 19.0524C12.0138 20.3323 12 20.741 12 23.9999C12 27.259 12.0138 27.6676 12.0722 28.9475C12.1305 30.2248 12.3333 31.0971 12.63 31.8604C12.9366 32.6495 13.3469 33.3187 14.0141 33.9859C14.6812 34.653 15.3504 35.0633 16.1395 35.3699C16.9028 35.6666 17.7752 35.8694 19.0524 35.9277C20.3323 35.9861 20.741 35.9999 24 35.9999C27.259 35.9999 27.6677 35.9861 28.9476 35.9277C30.2248 35.8694 31.0972 35.6666 31.8605 35.3699C32.6496 35.0633 33.3188 34.653 33.9859 33.9859C34.653 33.3187 35.0634 32.6495 35.37 31.8604C35.6667 31.0971 35.8695 30.2248 35.9278 28.9475C35.9862 27.6676 36 27.259 36 23.9999C36 20.741 35.9862 20.3323 35.9278 19.0524C35.8695 17.7751 35.6667 16.9028 35.37 16.1395C35.0634 15.3504 34.653 14.6812 33.9859 14.0141C33.3188 13.3469 32.6496 12.9366 31.8605 12.63C31.0972 12.3333 30.2248 12.1305 28.9476 12.0722C27.6677 12.0138 27.259 12 24 12Z" fill="white"/>
+					<path d="M24.0059 17.8433C20.6026 17.8433 17.8438 20.6021 17.8438 24.0054C17.8438 27.4087 20.6026 30.1675 24.0059 30.1675C27.4092 30.1675 30.1681 27.4087 30.1681 24.0054C30.1681 20.6021 27.4092 17.8433 24.0059 17.8433ZM24.0059 28.0054C21.7968 28.0054 20.0059 26.2145 20.0059 24.0054C20.0059 21.7963 21.7968 20.0054 24.0059 20.0054C26.2151 20.0054 28.0059 21.7963 28.0059 24.0054C28.0059 26.2145 26.2151 28.0054 24.0059 28.0054Z" fill="white"/>
+					<path d="M31.8507 17.5963C31.8507 18.3915 31.206 19.0363 30.4107 19.0363C29.6154 19.0363 28.9707 18.3915 28.9707 17.5963C28.9707 16.801 29.6154 16.1562 30.4107 16.1562C31.206 16.1562 31.8507 16.801 31.8507 17.5963Z" fill="white"/>
+				</svg>
+			</a>
+            <a href="https://www.youtube.com/c/5BestINcity" target="_blank" title="YouTube">
+				<svg width="800px" height="800px" viewBox="0 0 48 48" fill="none">
+					<circle cx="24" cy="24" r="20" fill="#FF0000"/>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M35.3005 16.3781C35.6996 16.7772 35.9872 17.2739 36.1346 17.8187C36.9835 21.2357 36.7873 26.6324 36.1511 30.1813C36.0037 30.7261 35.7161 31.2228 35.317 31.6219C34.9179 32.021 34.4212 32.3086 33.8764 32.456C31.8819 33 23.8544 33 23.8544 33C23.8544 33 15.8269 33 13.8324 32.456C13.2876 32.3086 12.7909 32.021 12.3918 31.6219C11.9927 31.2228 11.7051 30.7261 11.5577 30.1813C10.7038 26.7791 10.9379 21.3791 11.5412 17.8352C11.6886 17.2903 11.9762 16.7936 12.3753 16.3945C12.7744 15.9954 13.2711 15.7079 13.8159 15.5604C15.8104 15.0165 23.8379 15 23.8379 15C23.8379 15 31.8654 15 33.8599 15.544C34.4047 15.6914 34.9014 15.979 35.3005 16.3781ZM27.9423 24L21.283 27.8571V20.1428L27.9423 24Z" fill="white"/>
+				</svg>
+			</a>
+
+        </div>
+    </div>
+	
+	<div class="spacer"></div>
+	<script src="/sw-register.js"></script>
+</body>
+</html>

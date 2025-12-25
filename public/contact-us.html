@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        :root {
+            --primary-color: #007bff;
+            --text-color: #333;
+            --bg-light: #f9f9f9;
+            --border-color: #ddd;
+            --icon-bg: #e9ecef;
+            --app_primary: #CF5F39;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--text-color);
+            font-size: 1.5em;
+            margin: 20px 0;
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 12px 12px 0 0;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .contact-options {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .contact-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-color);
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .iconBg {
+            background-color: var(--app_primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            padding: 10px;
+            height: 50px;
+            width: 50px;
+        }
+
+        .contact-option svg {
+            width: 35px;
+            height: 35px;
+            fill: white;
+        }
+
+        .form-section {
+            padding-top: 10px;
+            flex-grow: 1;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--text-color);
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+		.checkbox {
+			display: flex;
+			align-items: center;
+			gap: 8px;
+			font-size: 1rem;
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+
+		.checkbox input {
+			margin: 0;
+			width: 20px;
+			height: 20px;
+			transition: transform 0.2s ease, background-color 0.2s ease;
+			cursor: pointer;
+			position: relative;
+		}
+
+		.checkbox input:checked {
+			transform: scale(1.1);
+			background-color: var(--app_primary);
+			border-color: var(--app_primary);
+		}
+
+		.checkbox label {
+			margin: 0;
+			font-size: 15px;
+			cursor: pointer;
+			user-select: none;
+		}
+
+		.checkbox:hover input {
+			transform: scale(1.05);
+		}
+
+        .form-button {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .form-button button {
+            background-color: var(--app_primary);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+			height: 50px;
+        }
+
+        .form-button button:hover {
+            background-color: #003d80;
+        }
+
+        .form-button button svg {
+            width: 25px;
+            height: 25px;
+        }
+
+        .spacer {
+            height: 50px;
+            width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .spinner {
+            animation: rotate 2s linear infinite;
+            width: 25px;
+            height: 25px;
+            margin-right: 10px;
+        }
+        
+        .spinner circle {
+            stroke: #ffffff;
+            stroke-linecap: round;
+            animation: dash 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes rotate {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes dash {
+            0% {
+                stroke-dasharray: 1, 150;
+                stroke-dashoffset: 0;
+            }
+            50% {
+                stroke-dasharray: 90, 150;
+                stroke-dashoffset: -35;
+            }
+            100% {
+                stroke-dasharray: 90, 150;
+                stroke-dashoffset: -124;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <h1>Contact Us</h1>
+    <div class="contact-options">
+        <a href="tel:+123456789" class="contact-option">
+            <div class="iconBg">
+                <svg viewBox="0 -960 960 960"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg>
+            </div>
+            <span>Call</span>
+        </a>
+        <a href="mailto:contact@example.com" class="contact-option">
+            <div class="iconBg">
+                <svg viewBox="0 -960 960 960"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+            </div>
+            <span>Email</span>
+        </a>
+        <a href="https://api.whatsapp.com/send?phone=+918981639515&amp;text=Hi, I contacted you Through your app." class="contact-option">
+            <div class="iconBg">
+                <svg viewBox="0 -960 960 960"><path d="M240-400h320v-80H240v80Zm0-120h480v-80H240v80Zm0-120h480v-80H240v80ZM80-80v-720q0-33 23.5-56.5T160-880h640q33 0 56.5 23.5T880-800v480q0 33-23.5 56.5T800-240H240L80-80Zm126-240h594v-480H160v525l46-45Zm-46 0v-480 480Z"/></svg>
+            </div>
+            <span>Chat</span>
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="form-section">
+            <form>
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required maxlength="10" pattern="[0-9]{10}" oninput="this.value = this.value.replace(/[^0-9]/g, '').substring(0, 10)">
+                </div>
+
+                <div class="form-group checkbox">
+					<input type="checkbox" id="businessOwner">
+					<label for="businessOwner">I am a Business Owner</label>
+				</div>
+
+
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+                </div>
+
+                <div class="form-button">
+                    <button type="submit">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path fill="#ffffff" d="M30.291,2.87l-9.581,25.26c-0.39,1.029-1.346,1.234-2.123,0.456c0,0-6.036-6.036-6.586-6.586 s-0.359-1.631,0.425-2.403l13.316-13.11c0.784-0.772,0.711-0.856-0.163-0.187L10.588,17.784c-0.873,0.669-2.224,0.58-3.002-0.198 l-4.172-4.172c-0.778-0.778-0.573-1.733,0.456-2.124l25.26-9.581C30.159,1.319,30.681,1.841,30.291,2.87z M8.707,20.121 C8.318,19.732,8,19.864,8,20.414V25c0,0.55,0.386,0.768,0.857,0.485l2.401-1.441c0.472-0.283,0.539-0.833,0.15-1.222L8.707,20.121z"/></svg>
+                        Send
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div class="spacer"></div>
+    </div>
+    <script>
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.innerHTML;
+            
+            // Add business owner value to form data
+            formData.set('businessOwner', document.getElementById('businessOwner').checked ? '1' : '0');
+
+            // Check login state from both sessionStorage and localStorage
+            const sessionLoginState = sessionStorage.getItem('loginState');
+            const localLoginState = localStorage.getItem('loginState');
+            
+            // User is logged in if either storage has the login state
+            if (sessionLoginState === 'logged_in' || localLoginState === 'logged_in') {
+                const userId = sessionStorage.getItem('user_id') || localStorage.getItem('user_id');
+                if (userId) {
+                    formData.append('user_id', userId);
+                }
+            }
+            
+            // Show loading state
+            submitButton.disabled = true;
+            submitButton.innerHTML = '<svg class="spinner" viewBox="0 0 50 50"><circle cx="25" cy="25" r="20" fill="none" stroke-width="5"></circle></svg>Sending...';
+            
+            fetch('https://myapps.5bestincity.com/api/app-api-only/contactus_api.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    Swal.fire({
+                        icon: 'success',
+                        title: 'Success!',
+                        text: data.message,
+                        confirmButtonColor: '#CF5F39'
+                    }).then(() => {
+                        this.reset();
+                    });
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Oops...',
+                        text: data.message || 'An error occurred. Please try again.',
+                        confirmButtonColor: '#CF5F39'
+                    });
+                }
+            })
+            .catch(error => {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Oops...',
+                    text: 'An error occurred. Please try again.',
+                    confirmButtonColor: '#CF5F39'
+                });
+                console.error('Error:', error);
+            })
+            .finally(() => {
+                // Re-enable the submit button and restore original text
+                submitButton.disabled = false;
+                submitButton.innerHTML = originalButtonText;
+            });
+        });
+    </script>
+    <script src="/sw-register.js"></script>
+</body>
+</html>
